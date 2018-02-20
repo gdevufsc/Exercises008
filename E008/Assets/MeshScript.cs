@@ -29,6 +29,7 @@ public class MeshScript : MonoBehaviour {
 		mesh.triangles = Triangles;
 
 		incremento = 1f / 30f;
+        
 	}
 	
 	float t, incremento;
@@ -39,9 +40,10 @@ public class MeshScript : MonoBehaviour {
 		if (t > (2 * Mathf.PI))
 			t = 0;
 
-		Vertices[0] = new Vector3( Mathf.Cos(t) , Mathf.Sin(t) , 0 ); //vertice zero circulando
+		Vertices[0] = new Vector3( Mathf.Cos(t+Mathf.PI / 2) , Mathf.Sin(t + Mathf.PI/2) , 0 ); //vertice zero circulando
 
-		//Vertices [2] = t >= Mathf.PI ? new Vector3 (t, -t, 0) : new Vector3 (-t,t,0) ; // vertice 2 andando numa reta;
+		Vertices [2] = t <= Mathf.PI ? new Vector3 (t, -t, 0) : (Vertices[2] - new Vector3 (incremento,-incremento,0)) ;
+        // vertice 2 andando numa reta;
 
 		mesh.vertices = Vertices;
 	}
