@@ -288,8 +288,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GizmoScript.cs" />
-    <Compile Include="Assets\MeshScript.cs" />
+    <Compile Include="Assets\MeshScene\GizmoScript.cs" />
+    <Compile Include="Assets\MeshScene\MeshScript.cs" />
     <Compile Include="Assets\MoveComTouch\MoveComTouch.cs" />
     <Compile Include="Assets\SubSuperClassTipoGeneric\MyCode.cs" />
     <Compile Include="Assets\SubSuperClassTipoGeneric\SubClasse.cs" />
